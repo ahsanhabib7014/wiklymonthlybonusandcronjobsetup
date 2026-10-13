@@ -198,6 +198,7 @@ export function proxy(req) {
       '/api/auth/register',
       '/api/auth/reset-password',
       '/api/auth/logout',
+      '/api/cron',
       // ✅ '/api/admin/seed' সরানো হয়েছে — security risk
     ];
     const isPublicApi = publicApiPaths.some((path) => pathname.startsWith(path));
@@ -209,7 +210,7 @@ export function proxy(req) {
       '/login',
       '/register',
       '/reset-password',        
-      '/api/cron',   
+         
     ];
     const isPublicPage = publicPages.some((path) => 
       pathname === path || pathname.startsWith(path + '/')
