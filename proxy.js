@@ -208,9 +208,8 @@ export function proxy(req) {
     const publicPages = [
       '/login',
       '/register',
-      '/reset-password',
-      '/admin/login',         // ✅ admin login exempt
-      '/admin/register',      // ✅ যদি থাকে
+      '/reset-password',        
+      '/api/cron',   
     ];
     const isPublicPage = publicPages.some((path) => 
       pathname === path || pathname.startsWith(path + '/')
